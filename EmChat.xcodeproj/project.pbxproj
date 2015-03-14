@@ -21,6 +21,7 @@
 		75F2A8A31AB4615B009C434E /* Attraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2A89E1AB4615B009C434E /* Attraction.m */; };
 		75F2A8A41AB4615B009C434E /* Interest.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2A8A01AB4615B009C434E /* Interest.m */; };
 		75F2A8A51AB4615B009C434E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2A8A21AB4615B009C434E /* Person.m */; };
+		75F2A8A81AB470A2009C434E /* AttractionsSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2A8A71AB470A2009C434E /* AttractionsSelectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		75F2A8A01AB4615B009C434E /* Interest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Interest.m; sourceTree = "<group>"; };
 		75F2A8A11AB4615B009C434E /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		75F2A8A21AB4615B009C434E /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		75F2A8A61AB470A2009C434E /* AttractionsSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionsSelectionViewController.h; sourceTree = "<group>"; };
+		75F2A8A71AB470A2009C434E /* AttractionsSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttractionsSelectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 				118CA1681AB45A41002F0A4F /* InterestSelectionTableViewController.m */,
 				118CA16A1AB45B46002F0A4F /* InterestTableViewCell.h */,
 				118CA16B1AB45B46002F0A4F /* InterestTableViewCell.m */,
+				75F2A8A61AB470A2009C434E /* AttractionsSelectionViewController.h */,
+				75F2A8A71AB470A2009C434E /* AttractionsSelectionViewController.m */,
 			);
 			path = EmChat;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 				75F2A8A41AB4615B009C434E /* Interest.m in Sources */,
 				115D97591AB4499B00321D8F /* TakePhotoViewController.m in Sources */,
 				118CA1661AB4541F002F0A4F /* UIActionSheet+Blocks.m in Sources */,
+				75F2A8A81AB470A2009C434E /* AttractionsSelectionViewController.m in Sources */,
 				115D97341AB445E700321D8F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

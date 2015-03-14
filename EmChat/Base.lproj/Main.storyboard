@@ -199,5 +199,23 @@
             </objects>
             <point key="canvasLocation" x="1846" y="315"/>
         </scene>
+        <!--Attractions Selection View Controller-->
+        <scene sceneID="V1P-JS-wsd">
+            <objects>
+                <viewController storyboardIdentifier="AttractionsSelectionViewController" id="a7X-a0-MXy" customClass="AttractionsSelectionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zwP-g9-4JJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="dPG-Rl-TSB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H3c-k3-go4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7pQ-jx-0M2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2493" y="315"/>
+        </scene>
     </scenes>
 </document>

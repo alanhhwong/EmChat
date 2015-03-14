@@ -8,6 +8,7 @@
 
 #import "InterestSelectionTableViewController.h"
 #import "InterestTableViewCell.h"
+#import "AttractionsSelectionViewController.h"
 
 @interface InterestSelectionTableViewController ()
 @property (nonatomic, strong) NSMutableArray *selectedInterests, *otherInterests, *selectedSearchedInterests, *otherSearchedInterests;
@@ -31,6 +32,17 @@
     _otherSearchedInterests = [_otherInterests mutableCopy];
 
 //    [self.tableView registerClass:[InterestTableViewCell class] forCellReuseIdentifier:@"InterestTableViewCell"];
+    
+    self.navigationController.navigationBarHidden = false;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStyleDone target:self action:@selector(goNext:)];
+    
+    self.title = @"Add Interests";
+}
+
+- (void) goNext:(UIBarButtonItem *)sender
+{
+    AttractionsSelectionViewController *attVC = (AttractionsSelectionViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"AttractionsSelectionViewController"];
+    [self.navigationController pushViewController:attVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -131,6 +143,8 @@
         [_otherInterests removeObject:str];
         [_selectedSearchedInterests addObject:str];
         [_selectedInterests addObject:str];
+        
+//        [self.tableView moveRowAtIndexPath:indexPath toIndexPath:[NSIndexPath indexPathForRow: inSection:<#(NSInteger)#>]]
     }
     else if (indexPath.section == 2) {
         [_selectedInterests addObject:_searchBar.text];
