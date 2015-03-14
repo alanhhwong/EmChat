@@ -11,7 +11,7 @@
 
 @interface Person : NSObject
 
-@property NSNumber *_id;
+@property NSString *_id;
 @property NSString *display_name;
 @property NSString *original_img_url;
 @property NSString *blur_img_url;

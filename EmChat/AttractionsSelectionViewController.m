@@ -10,6 +10,7 @@
 #import "AttractionTableViewCell.h"
 #import "Attraction.h"
 #import "AFNetworking.h"
+#import "AppDelegate.h"
 
 NSString const *USER_BASE_URL = @"http://emchat.ngrok.com/user";
 
@@ -85,7 +86,11 @@ NSString const *USER_BASE_URL = @"http://emchat.ngrok.com/user";
 
 
 - (IBAction)donePressed:(id)sender {
-    NSMutableArray *attractionsArray = [NSMutableArray array];
+    
+    AppDelegate* delegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
+    [delegate showMainWindow:self.me];
+    
+    /*NSMutableArray *attractionsArray = [NSMutableArray array];
     for (NSString* name in _selectedAttractions) {
         Attraction* attraction = [[Attraction alloc]init];
         attraction.name = name;
@@ -99,11 +104,16 @@ NSString const *USER_BASE_URL = @"http://emchat.ngrok.com/user";
           success:^(AFHTTPRequestOperation *operation, id responseObject)
     {
         NSLog(@"JSON: %@", responseObject);
+        NSDictionary *responseDict = responseObject;
+        self.me._id = [responseDict objectForKey:@"uid"];
+     
+        AppDelegate* delegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
+        [delegate showMainWindow:self.me];
     }
           failure:
      ^(AFHTTPRequestOperation *operation, NSError *error) {
          NSLog(@"Error: %@", error);
-     }];
+     }];*/
 }
 
 @end

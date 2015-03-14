@@ -39,10 +39,10 @@ NSString const *PIC_BASE_URL = @"http://emchat.ngrok.com/PIC/";
 -(id)initWithDictionary:(NSDictionary*)pDictionary
 {
     if ((self = [super init])) {
-        self._id = [pDictionary objectForKey:@"_id"];
+        self._id = [pDictionary objectForKey:@"uid"];
         self.display_name = [pDictionary objectForKey:@"display_name"];
-        self.original_img_url = [[PIC_BASE_URL stringByAppendingString:[self._id stringValue]] stringByAppendingString:@".JPG"];
-        self.blur_img_url = [[PIC_BASE_URL stringByAppendingString:[self._id stringValue]] stringByAppendingString:@"_BLUR.JPG"];
+        self.original_img_url = [[PIC_BASE_URL stringByAppendingString:self._id] stringByAppendingString:@".JPG"];
+        self.blur_img_url = [[PIC_BASE_URL stringByAppendingString:self._id] stringByAppendingString:@"_BLUR.JPG"];
         NSArray *interestsArr = pDictionary[@"interests"];
         _interests = [NSMutableArray array];
         for (NSDictionary *dictionary in interestsArr)
@@ -50,15 +50,16 @@ NSString const *PIC_BASE_URL = @"http://emchat.ngrok.com/PIC/";
             Interest *interest = [[Interest alloc] initWithDictionary:dictionary];
             [_interests addObject:interest];
         }
+        self.interests = _interests;
         
         NSArray *thingsToDoArr = pDictionary[@"attractions"];
         _attractions = [NSMutableArray array];
         for (NSDictionary *dictionary in thingsToDoArr)
         {
-            Attraction *interest = [[Attraction alloc] initWithDictionary:dictionary];
-            [_attractions addObject:interest];
+            Attraction *attraction = [[Attraction alloc] initWithDictionary:dictionary];
+            [_attractions addObject:attraction];
         }
-        
+        self.attractions = _attractions;
     }
     return self;
 }

@@ -19,6 +19,8 @@
 #import "ATLMQRScannerController.h"
 #import "ATLMUtilities.h"
 
+#import "MainViewController.h"
+
 // TODO: Configure a Layer appID from https://developer.layer.com/dashboard/atlas/build
 static NSString *const ATLMLayerAppID = @"6b60f7f0-ca7c-11e4-a5c8-eae84600392d";
 
@@ -31,6 +33,14 @@ static NSString *const ATLMLayerAppID = @"6b60f7f0-ca7c-11e4-a5c8-eae84600392d";
 
 @implementation AppDelegate
 
+-(void) showMainWindow:(Person*) person {
+    MainViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MainViewController"];
+    viewController.me = person;
+    
+    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:viewController];
+    self.window.rootViewController = navController;
+    
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
