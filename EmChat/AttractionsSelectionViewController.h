@@ -12,5 +12,6 @@
 @interface AttractionsSelectionViewController : UIViewController
 
 @property Person* me;
+- (IBAction)donePressed:(id)sender;
 
 @end

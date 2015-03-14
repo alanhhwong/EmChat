@@ -10,7 +10,7 @@
 #import "Interest.h"
 #import "Attraction.h"
 
-NSString const *PIC_BASE_URL = @"http://61ce5cfa.ngrok.com/PIC";
+NSString const *PIC_BASE_URL = @"http://61ce5cfa.ngrok.com/PIC/";
 
 @implementation Person
 

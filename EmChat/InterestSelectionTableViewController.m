@@ -201,7 +201,7 @@
     for (NSString* name in _selectedInterests) {
         Interest* interest = [[Interest alloc]init];
         interest.name = name;
-        interest.match = false;
+        interest.match = @false;
         [interestsArray addObject:interest];
     }
     _me.interests = interestsArray;

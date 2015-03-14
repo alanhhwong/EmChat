@@ -8,6 +8,10 @@
 
 #import "AttractionsSelectionViewController.h"
 #import "AttractionTableViewCell.h"
+#import "Attraction.h"
+#import "AFNetworking.h"
+
+NSString const *USER_BASE_URL = @"http://61ce5cfa.ngrok.com/user";
 
 @interface AttractionsSelectionViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -79,5 +83,27 @@
     [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
+
+- (IBAction)donePressed:(id)sender {
+    NSMutableArray *attractionsArray = [NSMutableArray array];
+    for (NSString* name in _selectedAttractions) {
+        Attraction* attraction = [[Attraction alloc]init];
+        attraction.name = name;
+        attraction.match = @false;
+        [attractionsArray addObject:attraction];
+    }
+    self.me.attractions = attractionsArray;
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager POST:USER_BASE_URL parameters:[self.me toDictionary]
+          success:^(AFHTTPRequestOperation *operation, id responseObject)
+    {
+        NSLog(@"JSON: %@", responseObject);
+    }
+          failure:
+     ^(AFHTTPRequestOperation *operation, NSError *error) {
+         NSLog(@"Error: %@", error);
+     }];
+}
 
 @end
