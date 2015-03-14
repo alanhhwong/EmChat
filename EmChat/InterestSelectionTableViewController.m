@@ -128,6 +128,7 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section == 0) {
         NSString *str = [_selectedSearchedInterests objectAtIndex:indexPath.row];
         
@@ -135,6 +136,9 @@
         [_selectedInterests removeObject:str];
         [_otherSearchedInterests addObject:str];
         [_otherInterests addObject:str];
+        NSIndexPath *otherIndexPath = [NSIndexPath indexPathForRow:_otherSearchedInterests.count-1 inSection:1];
+        [self.tableView moveRowAtIndexPath:indexPath toIndexPath:otherIndexPath];
+        [self.tableView reloadRowsAtIndexPaths:@[otherIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
     else if (indexPath.section == 1) {
         NSString *str = [_otherSearchedInterests objectAtIndex:indexPath.row];
@@ -144,14 +148,16 @@
         [_selectedSearchedInterests addObject:str];
         [_selectedInterests addObject:str];
         
-//        [self.tableView moveRowAtIndexPath:indexPath toIndexPath:[NSIndexPath indexPathForRow: inSection:<#(NSInteger)#>]]
+        NSIndexPath *otherIndexPath = [NSIndexPath indexPathForRow:_selectedSearchedInterests.count-1 inSection:0];
+        [self.tableView moveRowAtIndexPath:indexPath toIndexPath:otherIndexPath];
+        [self.tableView reloadRowsAtIndexPaths:@[otherIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
     else if (indexPath.section == 2) {
         [_selectedInterests addObject:_searchBar.text];
         _searchBar.text = @"";
         [self searchBar:_searchBar textDidChange:@""];
+        [self.tableView reloadData];
     }
-    [self.tableView reloadData];
 }
 
 /*
