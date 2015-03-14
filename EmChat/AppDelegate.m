@@ -35,6 +35,9 @@ static NSString *const ATLMLayerAppID = @"6b60f7f0-ca7c-11e4-a5c8-eae84600392d";
 
 -(void) showMainWindow:(Person*) person {
     MainViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MainViewController"];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:[person toDictionary] forKey:@"loggedInPerson"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     viewController.me = person;
     
     UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:viewController];
@@ -60,6 +63,11 @@ static NSString *const ATLMLayerAppID = @"6b60f7f0-ca7c-11e4-a5c8-eae84600392d";
     
     // Setup notifications
     [self registerNotificationObservers];
+    
+    NSDictionary *dict = [[NSUserDefaults standardUserDefaults] objectForKey:@"loggedInPerson"];
+    if (dict) {
+        [self showMainWindow:[[Person alloc] initWithDictionary:dict]];
+    }
     
     return YES;
 }
