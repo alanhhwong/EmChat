@@ -147,7 +147,7 @@
                         <searchBar key="tableHeaderView" contentMode="redraw" id="yFv-gq-dkz">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             <connections>
                                 <outlet property="delegate" destination="rLa-p3-udP" id="hER-13-zEs"/>
                             </connections>
