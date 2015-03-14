@@ -18,6 +18,9 @@
 		118CA1661AB4541F002F0A4F /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 118CA1651AB4541F002F0A4F /* UIActionSheet+Blocks.m */; };
 		118CA1691AB45A41002F0A4F /* InterestSelectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 118CA1681AB45A41002F0A4F /* InterestSelectionTableViewController.m */; };
 		118CA16C1AB45B46002F0A4F /* InterestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 118CA16B1AB45B46002F0A4F /* InterestTableViewCell.m */; };
+		75F2A8A31AB4615B009C434E /* Attraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2A89E1AB4615B009C434E /* Attraction.m */; };
+		75F2A8A41AB4615B009C434E /* Interest.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2A8A01AB4615B009C434E /* Interest.m */; };
+		75F2A8A51AB4615B009C434E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2A8A21AB4615B009C434E /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,12 @@
 		118CA1681AB45A41002F0A4F /* InterestSelectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestSelectionTableViewController.m; sourceTree = "<group>"; };
 		118CA16A1AB45B46002F0A4F /* InterestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterestTableViewCell.h; sourceTree = "<group>"; };
 		118CA16B1AB45B46002F0A4F /* InterestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestTableViewCell.m; sourceTree = "<group>"; };
+		75F2A89D1AB4615B009C434E /* Attraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attraction.h; sourceTree = "<group>"; };
+		75F2A89E1AB4615B009C434E /* Attraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Attraction.m; sourceTree = "<group>"; };
+		75F2A89F1AB4615B009C434E /* Interest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interest.h; sourceTree = "<group>"; };
+		75F2A8A01AB4615B009C434E /* Interest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Interest.m; sourceTree = "<group>"; };
+		75F2A8A11AB4615B009C434E /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		75F2A8A21AB4615B009C434E /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +102,12 @@
 		115D97301AB445E700321D8F /* EmChat */ = {
 			isa = PBXGroup;
 			children = (
+				75F2A89D1AB4615B009C434E /* Attraction.h */,
+				75F2A89E1AB4615B009C434E /* Attraction.m */,
+				75F2A89F1AB4615B009C434E /* Interest.h */,
+				75F2A8A01AB4615B009C434E /* Interest.m */,
+				75F2A8A11AB4615B009C434E /* Person.h */,
+				75F2A8A21AB4615B009C434E /* Person.m */,
 				118CA1631AB45419002F0A4F /* External */,
 				115D97351AB445E700321D8F /* AppDelegate.h */,
 				115D97361AB445E700321D8F /* AppDelegate.m */,
@@ -247,10 +262,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75F2A8A31AB4615B009C434E /* Attraction.m in Sources */,
 				118CA16C1AB45B46002F0A4F /* InterestTableViewCell.m in Sources */,
+				75F2A8A51AB4615B009C434E /* Person.m in Sources */,
 				118CA1691AB45A41002F0A4F /* InterestSelectionTableViewController.m in Sources */,
 				115D973A1AB445E700321D8F /* ViewController.m in Sources */,
 				115D97371AB445E700321D8F /* AppDelegate.m in Sources */,
+				75F2A8A41AB4615B009C434E /* Interest.m in Sources */,
 				115D97591AB4499B00321D8F /* TakePhotoViewController.m in Sources */,
 				118CA1661AB4541F002F0A4F /* UIActionSheet+Blocks.m in Sources */,
 				115D97341AB445E700321D8F /* main.m in Sources */,
