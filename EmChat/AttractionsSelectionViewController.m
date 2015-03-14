@@ -76,6 +76,7 @@
     else {
         [_selectedAttractions addObject:_attractions[indexPath.row]];
     }
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 
