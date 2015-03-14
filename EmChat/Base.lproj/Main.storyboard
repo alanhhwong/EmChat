@@ -159,7 +159,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lge-m1-vH0" id="9hj-6u-LUf">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTa-Xg-gij">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTa-Xg-gij">
                                             <rect key="frame" x="8" y="11" width="528" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -168,18 +168,16 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6YI-qq-U3V">
                                             <rect key="frame" x="544" y="2" width="40" height="40"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="40" id="zWy-cr-QPF"/>
+                                                <constraint firstAttribute="width" constant="40" id="EAO-vX-faA"/>
+                                                <constraint firstAttribute="height" constant="40" id="mb8-li-sHg"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="6YI-qq-U3V" firstAttribute="top" secondItem="9hj-6u-LUf" secondAttribute="topMargin" constant="-6" id="Apv-ad-UUD"/>
-                                        <constraint firstItem="6YI-qq-U3V" firstAttribute="leading" secondItem="gTa-Xg-gij" secondAttribute="trailing" constant="8" symbolic="YES" id="E7D-j8-dCa"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="6YI-qq-U3V" secondAttribute="bottom" constant="-6.5" id="VrO-bP-6Dx"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="6YI-qq-U3V" secondAttribute="trailing" constant="8" id="XqE-tT-29Q"/>
-                                        <constraint firstItem="gTa-Xg-gij" firstAttribute="top" secondItem="9hj-6u-LUf" secondAttribute="topMargin" constant="3" id="Y3J-GT-rQK"/>
-                                        <constraint firstItem="gTa-Xg-gij" firstAttribute="leading" secondItem="9hj-6u-LUf" secondAttribute="leadingMargin" id="cqg-KY-HwP"/>
-                                        <constraint firstItem="gTa-Xg-gij" firstAttribute="centerY" secondItem="9hj-6u-LUf" secondAttribute="centerY" id="va5-mM-YmH"/>
+                                        <constraint firstItem="gTa-Xg-gij" firstAttribute="leading" secondItem="9hj-6u-LUf" secondAttribute="leading" constant="8" id="DHB-AF-udI"/>
+                                        <constraint firstAttribute="trailing" secondItem="6YI-qq-U3V" secondAttribute="trailing" constant="16" id="NkP-v3-VpS"/>
+                                        <constraint firstAttribute="centerY" secondItem="gTa-Xg-gij" secondAttribute="centerY" constant="0.25" id="OMK-pP-1Gb"/>
+                                        <constraint firstAttribute="centerY" secondItem="6YI-qq-U3V" secondAttribute="centerY" constant="-0.25" id="cyp-Yy-9gV"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

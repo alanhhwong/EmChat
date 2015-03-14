@@ -26,9 +26,9 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     _selectedInterests = [NSMutableArray array];
-    _selectedSearchedInterests = [_selectedInterests copy];
+    _selectedSearchedInterests = [_selectedInterests mutableCopy];
     _otherInterests = [@[@"Hiking", @"Skiing"] mutableCopy];
-    _otherSearchedInterests = [_otherInterests copy];
+    _otherSearchedInterests = [_otherInterests mutableCopy];
 
 //    [self.tableView registerClass:[InterestTableViewCell class] forCellReuseIdentifier:@"InterestTableViewCell"];
 }
@@ -95,10 +95,11 @@
     // Configure the cell...
     
     NSArray *arr = _otherSearchedInterests;
-    cell.imageView.image = nil;
+    cell.checkmarkImageView.image = nil;
     if (indexPath.section == 0) {
         arr = _selectedSearchedInterests;
-        cell.imageView.image = [UIImage imageNamed:@"Next Button Logo"];
+//        cell.checkmarkImageView.backgroundColor = [UIColor grayColor];
+        cell.checkmarkImageView.image = [UIImage imageNamed:@"Next Button Logo"];
     }
     
     if (indexPath.section == 2) {
