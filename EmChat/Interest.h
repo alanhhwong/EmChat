@@ -11,6 +11,10 @@
 @interface Interest : NSObject
 
 @property NSString* name;
-@property BOOL match;
+@property NSNumber* match;
+
+-(NSMutableDictionary*) toDictionary;
+
+-(id)initWithDictionary:(NSDictionary*)pDictionary;
 
 @end

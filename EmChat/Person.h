@@ -11,6 +11,7 @@
 
 @interface Person : NSObject
 
+@property NSNumber *_id;
 @property NSString *display_name;
 @property NSString *original_img_url;
 @property NSString *blur_img_url;
@@ -18,5 +19,8 @@
 @property NSMutableArray *attractions;
 @property UIImage *image;
 
+-(NSMutableDictionary*) toDictionary;
+
+-(id)initWithDictionary:(NSDictionary*)pDictionary;
 
 @end
