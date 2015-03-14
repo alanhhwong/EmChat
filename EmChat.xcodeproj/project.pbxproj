@@ -22,6 +22,7 @@
 		75F2A8A41AB4615B009C434E /* Interest.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2A8A01AB4615B009C434E /* Interest.m */; };
 		75F2A8A51AB4615B009C434E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2A8A21AB4615B009C434E /* Person.m */; };
 		75F2A8A81AB470A2009C434E /* AttractionsSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2A8A71AB470A2009C434E /* AttractionsSelectionViewController.m */; };
+		75F2A8AA1AB4733B009C434E /* InterestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75F2A8A91AB4733B009C434E /* InterestTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		75F2A8A21AB4615B009C434E /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		75F2A8A61AB470A2009C434E /* AttractionsSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionsSelectionViewController.h; sourceTree = "<group>"; };
 		75F2A8A71AB470A2009C434E /* AttractionsSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttractionsSelectionViewController.m; sourceTree = "<group>"; };
+		75F2A8A91AB4733B009C434E /* InterestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InterestTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				118CA1681AB45A41002F0A4F /* InterestSelectionTableViewController.m */,
 				118CA16A1AB45B46002F0A4F /* InterestTableViewCell.h */,
 				118CA16B1AB45B46002F0A4F /* InterestTableViewCell.m */,
+				75F2A8A91AB4733B009C434E /* InterestTableViewCell.xib */,
 				75F2A8A61AB470A2009C434E /* AttractionsSelectionViewController.h */,
 				75F2A8A71AB470A2009C434E /* AttractionsSelectionViewController.m */,
 			);
@@ -250,6 +253,7 @@
 				115D973D1AB445E700321D8F /* Main.storyboard in Resources */,
 				115D97421AB445E700321D8F /* LaunchScreen.xib in Resources */,
 				115D973F1AB445E700321D8F /* Images.xcassets in Resources */,
+				75F2A8AA1AB4733B009C434E /* InterestTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

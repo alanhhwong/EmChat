@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="sQV-bA-HVe" customClass="InterestTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sQV-bA-HVe" id="59W-k0-0Mk">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZvJ-8l-Myx">
+                        <rect key="frame" x="8" y="11.5" width="42" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V2S-nY-5Ai">
+                        <rect key="frame" x="272" y="2" width="40" height="40"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="43i-Ga-DXY"/>
+                            <constraint firstAttribute="width" constant="40" id="R8r-Xy-MdN"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="V2S-nY-5Ai" firstAttribute="top" secondItem="59W-k0-0Mk" secondAttribute="topMargin" constant="-6" id="36K-Rc-Cev"/>
+                    <constraint firstItem="ZvJ-8l-Myx" firstAttribute="top" secondItem="59W-k0-0Mk" secondAttribute="topMargin" constant="3" id="ASb-de-uGu"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="V2S-nY-5Ai" secondAttribute="bottom" constant="-6.5" id="BgY-T8-bb8"/>
+                    <constraint firstAttribute="centerY" secondItem="V2S-nY-5Ai" secondAttribute="centerY" id="J5t-oY-q0z"/>
+                    <constraint firstItem="ZvJ-8l-Myx" firstAttribute="leading" secondItem="59W-k0-0Mk" secondAttribute="leadingMargin" id="UrU-ez-pbU"/>
+                    <constraint firstItem="V2S-nY-5Ai" firstAttribute="trailing" secondItem="59W-k0-0Mk" secondAttribute="trailingMargin" id="YtM-TO-koH"/>
+                    <constraint firstItem="ZvJ-8l-Myx" firstAttribute="centerY" secondItem="59W-k0-0Mk" secondAttribute="centerY" id="s2D-j3-elC"/>
+                    <constraint firstAttribute="trailing" secondItem="V2S-nY-5Ai" secondAttribute="trailing" constant="8" id="yh2-nc-Rrt"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="ASb-de-uGu"/>
+                        <exclude reference="36K-Rc-Cev"/>
+                        <exclude reference="BgY-T8-bb8"/>
+                        <exclude reference="YtM-TO-koH"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="checkmarkImageView" destination="V2S-nY-5Ai" id="boR-v8-A4l"/>
+                <outlet property="interestLabel" destination="ZvJ-8l-Myx" id="K88-eo-cce"/>
+            </connections>
+            <point key="canvasLocation" x="374" y="358"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InterestSelectionTableViewController : UITableViewController
+@interface InterestSelectionTableViewController : UIViewController
 
 @end

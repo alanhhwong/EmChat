@@ -13,6 +13,7 @@
 @interface InterestSelectionTableViewController ()
 @property (nonatomic, strong) NSMutableArray *selectedInterests, *otherInterests, *selectedSearchedInterests, *otherSearchedInterests;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
 @implementation InterestSelectionTableViewController
@@ -31,6 +32,7 @@
     _otherInterests = [@[@"Hiking", @"Skiing"] mutableCopy];
     _otherSearchedInterests = [_otherInterests mutableCopy];
 
+    [self.tableView registerNib:[UINib nibWithNibName:@"InterestTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"InterestTableViewCell"];
 //    [self.tableView registerClass:[InterestTableViewCell class] forCellReuseIdentifier:@"InterestTableViewCell"];
     
     self.navigationController.navigationBarHidden = false;
@@ -104,6 +106,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     InterestTableViewCell *cell = (InterestTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"InterestTableViewCell" forIndexPath:indexPath];
     
+//    if (!cell) {
+//        cell = [[[NSBundle mainBundle] loadNibNamed:@"InterestTableViewCell" owner:self options:nil] firstObject];
+//    }
     // Configure the cell...
     
     NSArray *arr = _otherSearchedInterests;
