@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Person.h"
 
 @interface AttractionsSelectionViewController : UIViewController
+
+@property Person* me;
 
 @end

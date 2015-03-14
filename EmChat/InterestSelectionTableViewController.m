@@ -9,11 +9,14 @@
 #import "InterestSelectionTableViewController.h"
 #import "InterestTableViewCell.h"
 #import "AttractionsSelectionViewController.h"
+#import "Person.h"
+#import "Interest.h"
 
 @interface InterestSelectionTableViewController ()
 @property (nonatomic, strong) NSMutableArray *selectedInterests, *otherInterests, *selectedSearchedInterests, *otherSearchedInterests;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end
 
 @implementation InterestSelectionTableViewController
@@ -34,17 +37,7 @@
 
     [self.tableView registerNib:[UINib nibWithNibName:@"InterestTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"InterestTableViewCell"];
 //    [self.tableView registerClass:[InterestTableViewCell class] forCellReuseIdentifier:@"InterestTableViewCell"];
-    
-    self.navigationController.navigationBarHidden = false;
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStyleDone target:self action:@selector(goNext:)];
-    
-    self.title = @"Add Interests";
-}
 
-- (void) goNext:(UIBarButtonItem *)sender
-{
-    AttractionsSelectionViewController *attVC = (AttractionsSelectionViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"AttractionsSelectionViewController"];
-    [self.navigationController pushViewController:attVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -199,14 +192,26 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    NSMutableArray *interestsArray = [NSMutableArray array];
+    for (NSString* name in _selectedInterests) {
+        Interest* interest = [[Interest alloc]init];
+        interest.name = name;
+        interest.match = false;
+        [interestsArray addObject:interest];
+    }
+    _me.interests = interestsArray;
+    
+    if([segue.identifier isEqualToString:@"showAttractions"]){
+        AttractionsSelectionViewController *controller = (AttractionsSelectionViewController *)segue.destinationViewController;
+        controller.me = _me;
+    }
+    
 }
-*/
+
 
 @end

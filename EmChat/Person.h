@@ -16,7 +16,7 @@
 @property NSString *blur_img_url;
 @property NSMutableArray *interests;
 @property NSMutableArray *attractions;
-@property UIImage *imageData;
+@property UIImage *image;
 
 
 @end

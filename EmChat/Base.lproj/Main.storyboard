@@ -111,7 +111,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="W4w-BH-MDc" kind="show" id="yKi-zQ-fr5"/>
+                                    <segue destination="W4w-BH-MDc" kind="show" identifier="showInterests" id="yKi-zQ-fr5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -170,7 +170,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="a7X-a0-MXy" kind="show" id="aQU-p2-D63"/>
+                                    <segue destination="a7X-a0-MXy" kind="show" identifier="showAttractions" id="aQU-p2-D63"/>
                                 </connections>
                             </button>
                         </subviews>
