@@ -17,8 +17,20 @@ NSString const *PIC_BASE_URL = @"http://emchat.ngrok.com/PIC/";
 -(NSDictionary*) toDictionary {
     NSMutableDictionary* dict = [NSMutableDictionary dictionary];
     [dict setObject:_display_name forKey:@"display_name"];
-    [dict setObject:_interests forKey:@"interests"];
-    [dict setObject:_attractions forKey:@"attractions"];
+    NSMutableArray *interestsArr = [NSMutableArray array];
+    
+    for (Interest *interest in _interests) {
+        [interestsArr addObject:[interest toDictionary]];
+    }
+    
+    NSMutableArray *attractionsArr = [NSMutableArray array];
+    
+    for (Attraction *attraction in _attractions) {
+        [attractionsArr addObject:[attraction toDictionary]];
+    }
+    
+    [dict setObject:interestsArr forKey:@"interests"];
+    [dict setObject:attractionsArr forKey:@"attractions"];
     [dict setObject:UIImageJPEGRepresentation(_image, 0.8) forKey:@"image_data"];
     return [dict mutableCopy];
 }
