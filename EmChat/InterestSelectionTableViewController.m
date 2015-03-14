@@ -43,8 +43,8 @@
 {
     searchText = [searchText lowercaseString];
     if (searchText.length == 0) {
-        _selectedSearchedInterests = [_selectedInterests copy];
-        _otherSearchedInterests = [_otherInterests copy];
+        _selectedSearchedInterests = [_selectedInterests mutableCopy];
+        _otherSearchedInterests = [_otherInterests mutableCopy];
         [searchBar resignFirstResponder];
     }
     else {
@@ -70,11 +70,16 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
+    
+    if (section == 2) {
+        return _selectedSearchedInterests.count == 0 && _otherSearchedInterests.count == 0 ? 1 : 0;
+    }
+    
     NSArray *arr = _otherSearchedInterests;
     if (section == 0) {
         arr = _selectedSearchedInterests;
@@ -90,15 +95,48 @@
     // Configure the cell...
     
     NSArray *arr = _otherSearchedInterests;
+    cell.imageView.image = nil;
     if (indexPath.section == 0) {
         arr = _selectedSearchedInterests;
+        cell.imageView.image = [UIImage imageNamed:@"Next Button Logo"];
     }
     
-    NSString *str = arr[indexPath.row];
-    
-    cell.interestLabel.text = str;
+    if (indexPath.section == 2) {
+        cell.interestLabel.text = [NSString stringWithFormat:@"Add new interest: \"%@\"", _searchBar.text];
+    }
+    else {
+        NSString *str = arr[indexPath.row];
+        
+        cell.interestLabel.text = str;
+    }
     
     return cell;
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        NSString *str = [_selectedSearchedInterests objectAtIndex:indexPath.row];
+        
+        [_selectedSearchedInterests removeObject:str];
+        [_selectedInterests removeObject:str];
+        [_otherSearchedInterests addObject:str];
+        [_otherInterests addObject:str];
+    }
+    else if (indexPath.section == 1) {
+        NSString *str = [_otherSearchedInterests objectAtIndex:indexPath.row];
+        
+        [_otherSearchedInterests removeObject:str];
+        [_otherInterests removeObject:str];
+        [_selectedSearchedInterests addObject:str];
+        [_selectedInterests addObject:str];
+    }
+    else if (indexPath.section == 2) {
+        [_selectedInterests addObject:_searchBar.text];
+        _searchBar.text = @"";
+        [self searchBar:_searchBar textDidChange:@""];
+    }
+    [self.tableView reloadData];
 }
 
 /*
