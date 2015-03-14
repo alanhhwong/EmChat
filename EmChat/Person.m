@@ -10,7 +10,7 @@
 #import "Interest.h"
 #import "Attraction.h"
 
-NSString const *PIC_BASE_URL = @"http://emchat.ngrok.com/PIC/";
+NSString const *PIC_BASE_URL = @"http://emchat.ngrok.com/tt.php?src=pic/";
 
 @implementation Person
 
@@ -41,8 +41,8 @@ NSString const *PIC_BASE_URL = @"http://emchat.ngrok.com/PIC/";
     if ((self = [super init])) {
         self._id = [pDictionary objectForKey:@"uid"];
         self.display_name = [pDictionary objectForKey:@"display_name"];
-        self.original_img_url = [[PIC_BASE_URL stringByAppendingString:self._id] stringByAppendingString:@".JPG"];
-        self.blur_img_url = [[PIC_BASE_URL stringByAppendingString:self._id] stringByAppendingString:@"_BLUR.JPG"];
+        self.original_img_url = [[PIC_BASE_URL stringByAppendingString:self._id] stringByAppendingString:@".png&w=150"];
+        self.blur_img_url = [[PIC_BASE_URL stringByAppendingString:self._id] stringByAppendingString:@".png&w=150&f=8|9"];
         NSArray *interestsArr = pDictionary[@"interests"];
         _interests = [NSMutableArray array];
         for (NSDictionary *dictionary in interestsArr)
