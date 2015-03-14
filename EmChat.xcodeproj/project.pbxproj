@@ -1,0 +1,461 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		115D97341AB445E700321D8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D97331AB445E700321D8F /* main.m */; };
+		115D97371AB445E700321D8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D97361AB445E700321D8F /* AppDelegate.m */; };
+		115D973A1AB445E700321D8F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D97391AB445E700321D8F /* ViewController.m */; };
+		115D973D1AB445E700321D8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115D973B1AB445E700321D8F /* Main.storyboard */; };
+		115D973F1AB445E700321D8F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 115D973E1AB445E700321D8F /* Images.xcassets */; };
+		115D97421AB445E700321D8F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 115D97401AB445E700321D8F /* LaunchScreen.xib */; };
+		115D974E1AB445E800321D8F /* EmChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D974D1AB445E800321D8F /* EmChatTests.m */; };
+		115D97591AB4499B00321D8F /* TakePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D97581AB4499B00321D8F /* TakePhotoViewController.m */; };
+		118CA1661AB4541F002F0A4F /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 118CA1651AB4541F002F0A4F /* UIActionSheet+Blocks.m */; };
+		118CA1691AB45A41002F0A4F /* InterestSelectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 118CA1681AB45A41002F0A4F /* InterestSelectionTableViewController.m */; };
+		118CA16C1AB45B46002F0A4F /* InterestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 118CA16B1AB45B46002F0A4F /* InterestTableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		115D97481AB445E800321D8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 115D97261AB445E700321D8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 115D972D1AB445E700321D8F;
+			remoteInfo = EmChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		115D972E1AB445E700321D8F /* EmChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		115D97321AB445E700321D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		115D97331AB445E700321D8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		115D97351AB445E700321D8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		115D97361AB445E700321D8F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		115D97381AB445E700321D8F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		115D97391AB445E700321D8F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		115D973C1AB445E700321D8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		115D973E1AB445E700321D8F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		115D97411AB445E700321D8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		115D97471AB445E800321D8F /* EmChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		115D974C1AB445E800321D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		115D974D1AB445E800321D8F /* EmChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmChatTests.m; sourceTree = "<group>"; };
+		115D97571AB4499B00321D8F /* TakePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TakePhotoViewController.h; sourceTree = "<group>"; };
+		115D97581AB4499B00321D8F /* TakePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TakePhotoViewController.m; sourceTree = "<group>"; };
+		118CA1641AB4541F002F0A4F /* UIActionSheet+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+Blocks.h"; sourceTree = "<group>"; };
+		118CA1651AB4541F002F0A4F /* UIActionSheet+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+Blocks.m"; sourceTree = "<group>"; };
+		118CA1671AB45A41002F0A4F /* InterestSelectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterestSelectionTableViewController.h; sourceTree = "<group>"; };
+		118CA1681AB45A41002F0A4F /* InterestSelectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestSelectionTableViewController.m; sourceTree = "<group>"; };
+		118CA16A1AB45B46002F0A4F /* InterestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterestTableViewCell.h; sourceTree = "<group>"; };
+		118CA16B1AB45B46002F0A4F /* InterestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestTableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		115D972B1AB445E700321D8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		115D97441AB445E800321D8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		115D97251AB445E700321D8F = {
+			isa = PBXGroup;
+			children = (
+				115D97301AB445E700321D8F /* EmChat */,
+				115D974A1AB445E800321D8F /* EmChatTests */,
+				115D972F1AB445E700321D8F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		115D972F1AB445E700321D8F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				115D972E1AB445E700321D8F /* EmChat.app */,
+				115D97471AB445E800321D8F /* EmChatTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		115D97301AB445E700321D8F /* EmChat */ = {
+			isa = PBXGroup;
+			children = (
+				118CA1631AB45419002F0A4F /* External */,
+				115D97351AB445E700321D8F /* AppDelegate.h */,
+				115D97361AB445E700321D8F /* AppDelegate.m */,
+				115D97381AB445E700321D8F /* ViewController.h */,
+				115D97391AB445E700321D8F /* ViewController.m */,
+				115D973B1AB445E700321D8F /* Main.storyboard */,
+				115D973E1AB445E700321D8F /* Images.xcassets */,
+				115D97401AB445E700321D8F /* LaunchScreen.xib */,
+				115D97311AB445E700321D8F /* Supporting Files */,
+				115D97571AB4499B00321D8F /* TakePhotoViewController.h */,
+				115D97581AB4499B00321D8F /* TakePhotoViewController.m */,
+				118CA1671AB45A41002F0A4F /* InterestSelectionTableViewController.h */,
+				118CA1681AB45A41002F0A4F /* InterestSelectionTableViewController.m */,
+				118CA16A1AB45B46002F0A4F /* InterestTableViewCell.h */,
+				118CA16B1AB45B46002F0A4F /* InterestTableViewCell.m */,
+			);
+			path = EmChat;
+			sourceTree = "<group>";
+		};
+		115D97311AB445E700321D8F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				115D97321AB445E700321D8F /* Info.plist */,
+				115D97331AB445E700321D8F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		115D974A1AB445E800321D8F /* EmChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				115D974D1AB445E800321D8F /* EmChatTests.m */,
+				115D974B1AB445E800321D8F /* Supporting Files */,
+			);
+			path = EmChatTests;
+			sourceTree = "<group>";
+		};
+		115D974B1AB445E800321D8F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				115D974C1AB445E800321D8F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		118CA1631AB45419002F0A4F /* External */ = {
+			isa = PBXGroup;
+			children = (
+				118CA1641AB4541F002F0A4F /* UIActionSheet+Blocks.h */,
+				118CA1651AB4541F002F0A4F /* UIActionSheet+Blocks.m */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		115D972D1AB445E700321D8F /* EmChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 115D97511AB445E800321D8F /* Build configuration list for PBXNativeTarget "EmChat" */;
+			buildPhases = (
+				115D972A1AB445E700321D8F /* Sources */,
+				115D972B1AB445E700321D8F /* Frameworks */,
+				115D972C1AB445E700321D8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmChat;
+			productName = EmChat;
+			productReference = 115D972E1AB445E700321D8F /* EmChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		115D97461AB445E800321D8F /* EmChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 115D97541AB445E800321D8F /* Build configuration list for PBXNativeTarget "EmChatTests" */;
+			buildPhases = (
+				115D97431AB445E800321D8F /* Sources */,
+				115D97441AB445E800321D8F /* Frameworks */,
+				115D97451AB445E800321D8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				115D97491AB445E800321D8F /* PBXTargetDependency */,
+			);
+			name = EmChatTests;
+			productName = EmChatTests;
+			productReference = 115D97471AB445E800321D8F /* EmChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		115D97261AB445E700321D8F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Alan Wong";
+				TargetAttributes = {
+					115D972D1AB445E700321D8F = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					115D97461AB445E800321D8F = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 115D972D1AB445E700321D8F;
+					};
+				};
+			};
+			buildConfigurationList = 115D97291AB445E700321D8F /* Build configuration list for PBXProject "EmChat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 115D97251AB445E700321D8F;
+			productRefGroup = 115D972F1AB445E700321D8F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				115D972D1AB445E700321D8F /* EmChat */,
+				115D97461AB445E800321D8F /* EmChatTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		115D972C1AB445E700321D8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				115D973D1AB445E700321D8F /* Main.storyboard in Resources */,
+				115D97421AB445E700321D8F /* LaunchScreen.xib in Resources */,
+				115D973F1AB445E700321D8F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		115D97451AB445E800321D8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		115D972A1AB445E700321D8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				118CA16C1AB45B46002F0A4F /* InterestTableViewCell.m in Sources */,
+				118CA1691AB45A41002F0A4F /* InterestSelectionTableViewController.m in Sources */,
+				115D973A1AB445E700321D8F /* ViewController.m in Sources */,
+				115D97371AB445E700321D8F /* AppDelegate.m in Sources */,
+				115D97591AB4499B00321D8F /* TakePhotoViewController.m in Sources */,
+				118CA1661AB4541F002F0A4F /* UIActionSheet+Blocks.m in Sources */,
+				115D97341AB445E700321D8F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		115D97431AB445E800321D8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				115D974E1AB445E800321D8F /* EmChatTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		115D97491AB445E800321D8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 115D972D1AB445E700321D8F /* EmChat */;
+			targetProxy = 115D97481AB445E800321D8F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		115D973B1AB445E700321D8F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				115D973C1AB445E700321D8F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		115D97401AB445E700321D8F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				115D97411AB445E700321D8F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		115D974F1AB445E800321D8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		115D97501AB445E800321D8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		115D97521AB445E800321D8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EmChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		115D97531AB445E800321D8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EmChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		115D97551AB445E800321D8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EmChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmChat.app/EmChat";
+			};
+			name = Debug;
+		};
+		115D97561AB445E800321D8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EmChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmChat.app/EmChat";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		115D97291AB445E700321D8F /* Build configuration list for PBXProject "EmChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				115D974F1AB445E800321D8F /* Debug */,
+				115D97501AB445E800321D8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		115D97511AB445E800321D8F /* Build configuration list for PBXNativeTarget "EmChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				115D97521AB445E800321D8F /* Debug */,
+				115D97531AB445E800321D8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		115D97541AB445E800321D8F /* Build configuration list for PBXNativeTarget "EmChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				115D97551AB445E800321D8F /* Debug */,
+				115D97561AB445E800321D8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 115D97261AB445E700321D8F /* Project object */;
+}
