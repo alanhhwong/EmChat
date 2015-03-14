@@ -11,7 +11,7 @@
 #import "Attraction.h"
 #import "AFNetworking.h"
 
-NSString const *USER_BASE_URL = @"http://61ce5cfa.ngrok.com/user";
+NSString const *USER_BASE_URL = @"http://emchat.ngrok.com/user";
 
 @interface AttractionsSelectionViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
