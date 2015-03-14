@@ -8,18 +8,22 @@
 
 #import "TakePhotoViewController.h"
 #import "UIActionSheet+Blocks.h"
+#import "Person.h"
+#import "InterestSelectionTableViewController.h"
 
 @interface TakePhotoViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *screenNameTextField;
 @property (weak, nonatomic) IBOutlet UIButton *profileImageButton;
+@property Person *me;
 @end
 
 @implementation TakePhotoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    _me = [[Person alloc]init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,18 +59,24 @@
     self.profileImageButton.layer.cornerRadius = CGRectGetHeight(self.profileImageButton.frame)/2;
     self.profileImageButton.layer.masksToBounds = YES;
     
+    _me.image = chosenImage;
+    
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    _me.display_name = _screenNameTextField.text;
+    
+    if([segue.identifier isEqualToString:@"showInterests"]){
+        InterestSelectionTableViewController *controller = (InterestSelectionTableViewController *)segue.destinationViewController;
+        controller.me = _me;
+    }
 }
-*/
+
 
 @end
