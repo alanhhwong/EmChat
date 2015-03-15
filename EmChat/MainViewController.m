@@ -16,6 +16,7 @@
 #import "AppDelegate.h"
 #import "Atlas.h"
 #import "ATLMConversationViewController.h"
+#import <UIKit/UIKit.h>
 
 
 @interface MainViewController ()
@@ -45,6 +46,7 @@
          }
 
          [_tableView reloadData];
+         NSLog(@"JSON: %@", responseObject);
      }
           failure:
      ^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -78,21 +80,34 @@
     }*/
     Person *person = [_personArray objectAtIndex:indexPath.row];
     
-    NSString *interests = @"";
+    NSMutableAttributedString *interests = [[NSMutableAttributedString alloc]initWithString:@""];
+    
     for (Interest* interest in person.interests) {
-        interests = [interests stringByAppendingString:interest.name];
-        interests = [interests stringByAppendingString:@" "];
+        NSMutableAttributedString *attrText = [[NSMutableAttributedString alloc] initWithString:interest.name];
+        if ([interest.match intValue] == 1) {
+            [attrText addAttribute: NSFontAttributeName value: [UIFont fontWithName: @"Helvetica-Bold" size:12] range: NSMakeRange(0, [interest.name length])];
+        }
+        
+        [interests appendAttributedString:[[NSAttributedString alloc] initWithString:@"#"]];
+        [interests appendAttributedString:attrText];
+        [interests appendAttributedString:[[NSAttributedString alloc] initWithString:@" "]];
     }
-    
-    NSString *attractions = @"";
+
+    NSMutableAttributedString *attractions = [[NSMutableAttributedString alloc]initWithString:@""];
     for (Attraction* attraction in person.attractions) {
-        attractions = [attractions stringByAppendingString:attraction.name];
-        attractions = [attractions stringByAppendingString:@" "];
+        NSMutableAttributedString *attrText2 = [[NSMutableAttributedString alloc] initWithString:attraction.name];
+        if ([attraction.match intValue] == 1) {
+            [attrText2 addAttribute: NSFontAttributeName value: [UIFont fontWithName: @"Helvetica-Bold" size:12] range: NSMakeRange(0, [attraction.name length])];
+        }
+        
+        [attractions appendAttributedString:[[NSAttributedString alloc] initWithString:@"#"]];
+        [attractions appendAttributedString:attrText2];
+        [attractions appendAttributedString:[[NSAttributedString alloc] initWithString:@" "]];
     }
     
-    cell.name.text = person.display_name;
-    cell.interests.text = interests;
-    cell.attractions.text = attractions;
+    cell.name.text = [NSString stringWithFormat:@"%@_%@", person.display_name, person._id];
+    cell.interests.attributedText = interests;
+    cell.attractions.attributedText = attractions;
     
     [cell.customImageView sd_setImageWithURL:[NSURL URLWithString:person.original_img_url   ]];
     
