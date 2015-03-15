@@ -105,7 +105,7 @@
         [attractions appendAttributedString:[[NSAttributedString alloc] initWithString:@" "]];
     }
     
-    cell.name.text = [NSString stringWithFormat:@"%@_%@", person.display_name, person._id];
+    cell.name.text = person.display_name;
     cell.interests.attributedText = interests;
     cell.attractions.attributedText = attractions;
     

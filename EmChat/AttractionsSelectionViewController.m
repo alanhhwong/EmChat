@@ -27,7 +27,7 @@ NSString const *USER_BASE_URL = @"http://emchat.ngrok.com/user";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    _attractions = [@[@"Dubai Fountains", @"Burj Khalifa", @"Dubai Mall", @"Check Circle", @"Dubai Metro"] mutableCopy];
+    _attractions = [@[@"Dubai Fountains", @"Burj Khalifa", @"Dubai Mall", @"Dubai Metro"] mutableCopy];
     _selectedAttractions = [NSMutableSet set];
 
     [self.tableView registerNib:[UINib nibWithNibName:@"AttractionTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"AttractionTableViewCell"];
