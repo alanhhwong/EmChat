@@ -151,6 +151,8 @@
 		75F2A8E11AB47933009C434E /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2A8D01AB47933009C434E /* UIWebView+AFNetworking.m */; };
 		75F2A8E51AB48421009C434E /* AttractionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2A8E31AB48421009C434E /* AttractionTableViewCell.m */; };
 		75F2A8E61AB48421009C434E /* AttractionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75F2A8E41AB48421009C434E /* AttractionTableViewCell.xib */; };
+		75F2A8E91AB50C6B009C434E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2A8E81AB50C6B009C434E /* LoginViewController.m */; };
+		75F2A8EB1AB50D70009C434E /* LemonMilk.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75F2A8EA1AB50D70009C434E /* LemonMilk.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -428,6 +430,9 @@
 		75F2A8E21AB48421009C434E /* AttractionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionTableViewCell.h; sourceTree = "<group>"; };
 		75F2A8E31AB48421009C434E /* AttractionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttractionTableViewCell.m; sourceTree = "<group>"; };
 		75F2A8E41AB48421009C434E /* AttractionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttractionTableViewCell.xib; sourceTree = "<group>"; };
+		75F2A8E71AB50C6B009C434E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		75F2A8E81AB50C6B009C434E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		75F2A8EA1AB50D70009C434E /* LemonMilk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LemonMilk.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -824,6 +829,8 @@
 				75F2A8E41AB48421009C434E /* AttractionTableViewCell.xib */,
 				1120424B1AB4CC230041869D /* MainViewController.h */,
 				1120424C1AB4CC230041869D /* MainViewController.m */,
+				75F2A8E71AB50C6B009C434E /* LoginViewController.h */,
+				75F2A8E81AB50C6B009C434E /* LoginViewController.m */,
 			);
 			path = EmChat;
 			sourceTree = "<group>";
@@ -831,6 +838,7 @@
 		115D97311AB445E700321D8F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				75F2A8EA1AB50D70009C434E /* LemonMilk.otf */,
 				115D97321AB445E700321D8F /* Info.plist */,
 				115D97331AB445E700321D8F /* main.m */,
 			);
@@ -1020,6 +1028,7 @@
 				1131FD2B1AB497F400642CA7 /* layerLogo@3x.png in Resources */,
 				1131FD201AB497F400642CA7 /* block@2x.png in Resources */,
 				115D973F1AB445E700321D8F /* Images.xcassets in Resources */,
+				75F2A8EB1AB50D70009C434E /* LemonMilk.otf in Resources */,
 				1131FC8D1AB496EC00642CA7 /* layer-client-messaging-schema.bundle in Resources */,
 				75F2A8AA1AB4733B009C434E /* InterestTableViewCell.xib in Resources */,
 				1131FD301AB497F400642CA7 /* plus@2x.png in Resources */,
@@ -1107,6 +1116,7 @@
 				75F2A8D71AB47933009C434E /* AFURLRequestSerialization.m in Sources */,
 				112042451AB4A30B0041869D /* ATLMCenterTextTableViewCell.m in Sources */,
 				1118F7B41AB4FCEC00E76B57 /* SDWebImageDecoder.m in Sources */,
+				75F2A8E91AB50C6B009C434E /* LoginViewController.m in Sources */,
 				1118F7B21AB4FCEC00E76B57 /* SDImageCache.m in Sources */,
 				75F2A8D61AB47933009C434E /* AFURLConnectionOperation.m in Sources */,
 				75F2A8DD1AB47933009C434E /* UIButton+AFNetworking.m in Sources */,

@@ -109,7 +109,7 @@
     if (indexPath.section == 0) {
         arr = _selectedSearchedInterests;
 //        cell.checkmarkImageView.backgroundColor = [UIColor grayColor];
-        cell.checkmarkImageView.image = [UIImage imageNamed:@"Next Button Logo"];
+        cell.checkmarkImageView.image = [UIImage imageNamed:@"Check Mark "];
     }
     
     if (indexPath.section == 2) {

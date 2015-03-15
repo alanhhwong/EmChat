@@ -12,6 +12,9 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    
+    _customImageView.layer.cornerRadius = CGRectGetHeight(_customImageView.frame)/2;
+    _customImageView.layer.masksToBounds = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
