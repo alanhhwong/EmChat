@@ -94,7 +94,7 @@
     cell.interests.text = interests;
     cell.attractions.text = attractions;
     
-    [cell.customImageView sd_setImageWithURL:[NSURL URLWithString:person.blur_img_url   ]];
+    [cell.customImageView sd_setImageWithURL:[NSURL URLWithString:person.original_img_url   ]];
     
     return cell;
 }
