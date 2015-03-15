@@ -87,10 +87,10 @@ NSString const *USER_BASE_URL = @"http://emchat.ngrok.com/user";
 
 - (IBAction)donePressed:(id)sender {
     
-    AppDelegate* delegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
-    [delegate showMainWindow:self.me];
+//    AppDelegate* delegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
+//    [delegate showMainWindow:self.me];
     
-    /*NSMutableArray *attractionsArray = [NSMutableArray array];
+    NSMutableArray *attractionsArray = [NSMutableArray array];
     for (NSString* name in _selectedAttractions) {
         Attraction* attraction = [[Attraction alloc]init];
         attraction.name = name;
@@ -113,7 +113,7 @@ NSString const *USER_BASE_URL = @"http://emchat.ngrok.com/user";
           failure:
      ^(AFHTTPRequestOperation *operation, NSError *error) {
          NSLog(@"Error: %@", error);
-     }];*/
+     }];
 }
 
 @end

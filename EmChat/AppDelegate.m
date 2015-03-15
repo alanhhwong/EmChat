@@ -35,6 +35,10 @@ static NSString *const ATLMLayerAppID = @"6b60f7f0-ca7c-11e4-a5c8-eae84600392d";
 
 -(void) showMainWindow:(Person*) person {
     MainViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MainViewController"];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:[person toDictionary] forKey:@"loggedInPerson"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [self connectLayerIfNeeded];
     viewController.me = person;
     
     UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:viewController];
@@ -60,6 +64,11 @@ static NSString *const ATLMLayerAppID = @"6b60f7f0-ca7c-11e4-a5c8-eae84600392d";
     
     // Setup notifications
     [self registerNotificationObservers];
+    
+    NSDictionary *dict = [[NSUserDefaults standardUserDefaults] objectForKey:@"loggedInPerson"];
+    if (dict) {
+        [self showMainWindow:[[Person alloc] initWithDictionary:dict]];
+    }
     
     return YES;
 }
@@ -138,7 +147,11 @@ static NSString *const ATLMLayerAppID = @"6b60f7f0-ca7c-11e4-a5c8-eae84600392d";
             NSLog(@"Layer Client Connected");
             
 //            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [self.applicationController registerAndAuthenticateUserWithName:@"test1"];
+            NSDictionary *dict = [[NSUserDefaults standardUserDefaults] objectForKey:@"loggedInPerson"];
+            if (dict) {
+                Person *person = [[Person alloc] initWithDictionary:dict];
+                [self.applicationController registerAndAuthenticateUserWithName:person._id];
+            }
 //            });
         }];
     }
