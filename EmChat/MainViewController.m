@@ -90,7 +90,7 @@
         attractions = [attractions stringByAppendingString:@" "];
     }
     
-    cell.name.text = person.display_name;
+    cell.name.text = [NSString stringWithFormat:@"%@_%@", person.display_name, person._id];
     cell.interests.text = interests;
     cell.attractions.text = attractions;
     
@@ -101,6 +101,7 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     
     Person *person = [_personArray objectAtIndex:indexPath.row];
@@ -108,6 +109,8 @@
     
     ATLMConversationViewController *controller = [ATLMConversationViewController conversationViewControllerWithLayerClient:appDelegate.applicationController.layerClient];
     controller.conversation = conversation;
+    controller.applicationController = appDelegate.applicationController;
+    controller.displaysAddressBar = false;
     [self.navigationController pushViewController:controller animated:YES];
 }
 
