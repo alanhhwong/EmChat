@@ -975,11 +975,11 @@
 				TargetAttributes = {
 					115D972D1AB445E700321D8F = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 8KHDAS8CTM;
+						DevelopmentTeam = PK2NCBPEQX;
 					};
 					115D97461AB445E800321D8F = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 8KHDAS8CTM;
+						DevelopmentTeam = 53V4JMFQ2C;
 						TestTargetID = 115D972D1AB445E700321D8F;
 					};
 				};
