@@ -57,16 +57,22 @@ NSString *const ATLMConversationDeletedNotification = @"LSConversationDeletedNot
     
     LYRQuery *query = [LYRQuery queryWithClass:[LYRConversation class]];
     
-    NSSet *participantsIncludingAuthenticatedUser = [participants setByAddingObject:@"test1"];
-    query.predicate = [LYRPredicate predicateWithProperty:@"participants" operator:LYRPredicateOperatorIsEqualTo value:participantsIncludingAuthenticatedUser];
-    NSSet *conversations = [[client executeQuery:query error:&error] set];
-    
-    LYRConversation *conversation = [conversations anyObject];
-    if (!conversation) {
-        conversation = [client newConversationWithParticipants:participantsIncludingAuthenticatedUser options:nil error:&error];
+    NSDictionary *dict = [[NSUserDefaults standardUserDefaults] objectForKey:@"loggedInPerson"];
+    if (dict) {
+        Person *person = [[Person alloc] initWithDictionary:dict];
+        NSSet *participantsIncludingAuthenticatedUser = [participants setByAddingObject:person._id];
+        query.predicate = [LYRPredicate predicateWithProperty:@"participants" operator:LYRPredicateOperatorIsEqualTo value:participantsIncludingAuthenticatedUser];
+        NSSet *conversations = [[client executeQuery:query error:&error] set];
+        
+        LYRConversation *conversation = [conversations anyObject];
+        if (!conversation) {
+            conversation = [client newConversationWithParticipants:participantsIncludingAuthenticatedUser options:nil error:&error];
+        }
+        
+        return conversation;
     }
     
-    return conversation;
+    return nil;
 }
 
 - (void)dealloc

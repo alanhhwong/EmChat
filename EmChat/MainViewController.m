@@ -12,6 +12,11 @@
 #import "Interest.h"
 #import "Attraction.h"
 #import "UIImageView+WebCache.h"
+#import <LayerKit/LayerKit.h>
+#import "AppDelegate.h"
+#import "Atlas.h"
+#import "ATLMConversationViewController.h"
+
 
 @interface MainViewController ()
 
@@ -92,6 +97,18 @@
     [cell.customImageView sd_setImageWithURL:[NSURL URLWithString:person.blur_img_url   ]];
     
     return cell;
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    
+    Person *person = [_personArray objectAtIndex:indexPath.row];
+    LYRConversation *conversation = [appDelegate.applicationController conversationWithParticipants:[NSSet setWithObject:person._id]];
+    
+    ATLMConversationViewController *controller = [ATLMConversationViewController conversationViewControllerWithLayerClient:appDelegate.applicationController.layerClient];
+    controller.conversation = conversation;
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 /*

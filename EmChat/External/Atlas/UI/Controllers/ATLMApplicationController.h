@@ -63,5 +63,6 @@ extern NSString *const ATLMConversationDeletedNotification;
 @property (nonatomic) ATLMPersistenceManager *persistenceManager;
 
 - (void)registerAndAuthenticateUserWithName:(NSString *)name;
+- (LYRConversation *) conversationWithParticipants:(NSSet *)participants;
 
 @end
