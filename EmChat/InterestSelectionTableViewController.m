@@ -32,7 +32,7 @@
     
     _selectedInterests = [NSMutableArray array];
     _selectedSearchedInterests = [_selectedInterests mutableCopy];
-    _otherInterests = [@[@"Hiking", @"Skiing"] mutableCopy];
+    _otherInterests = [@[@"Hiking", @"Eating", @"Night Life", @"Sightseeing", @"Sports"] mutableCopy];
     _otherSearchedInterests = [_otherInterests mutableCopy];
 
     [self.tableView registerNib:[UINib nibWithNibName:@"InterestTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"InterestTableViewCell"];
