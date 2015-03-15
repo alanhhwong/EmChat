@@ -90,7 +90,7 @@
         attractions = [attractions stringByAppendingString:@" "];
     }
     
-    cell.name.text = [NSString stringWithFormat:@"%@_%@", person.display_name, person._id];
+    cell.name.text = person.display_name;
     cell.interests.text = interests;
     cell.attractions.text = attractions;
     
